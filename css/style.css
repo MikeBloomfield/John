@@ -54,8 +54,9 @@ header {
 }
 /* header end*/
 /*main start*/
+/*intro start*/
 .intro {
-    height: 100vh;
+    height: 120vh;
     background: url(../img/Hero.jpg) no-repeat center;
     background-size: cover;
     padding-top: 263px;
@@ -96,7 +97,7 @@ margin-bottom: 22px;
 }
 .search-form__field::placeholder{
     color: #fff;
-}
+} 
 
 .search-form__submit {
     padding: 15px 39px;
@@ -111,4 +112,32 @@ margin-bottom: 22px;
 .search-form__submit:hover, .search-form__submit:active, .search-form__submit:focus {
 
 background-color: #0654b9;
+}
+/*intro end*/
+/*benefits start*/
+
+.benefits__wrap{
+    max-width: 1262px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits__cards{
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-column-gap: 55px;
+}
+.benefits__title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    width: 100%;
 }
