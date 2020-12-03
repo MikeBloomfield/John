@@ -25,11 +25,13 @@ img {
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .wrapper-full {
     max-width: 1262px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section-title {
@@ -97,6 +99,34 @@ header {
 .header__link:focus,
 .header__link:active {
     opacity: 0.75;
+}
+
+.header__burger {
+    width: 40px;
+    height: 28px;
+    position: relative;
+    display: none;
+}
+
+.burger__line {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+}
+
+.burger__line_first {
+    top: 0
+}
+
+.burger__line_third {
+    bottom: 0
+}
+
+.burger__line_second {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -543,3 +573,112 @@ header {
 
 
 /*videos end*/
+
+
+/* footer start  */
+
+.footer {
+    background-color: #0E1D28;
+    padding: 119px 0;
+}
+
+.footer__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__logo {
+    width: 50%;
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.footer__menu-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+}
+
+.footer__menu-link {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:active,
+.footer__menu-link:focus {
+    opacity: 0.75;
+}
+
+
+/* footer end */
+
+
+/* media start */
+
+@media screen and (max-width: 767px) {
+    .header__burger {
+        display: block;
+    }
+    .header__nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s all linear;
+    }
+    .header__nav_active {
+        transform: translateX(0);
+    }
+    .header__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .header__item:last-child {
+        margin: 0;
+    }
+    .header__link {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .header__nav-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 11;
+    }
+    .header__nav-close-line {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+    }
+    .header__nav-close-line:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+
+/* media end  */
